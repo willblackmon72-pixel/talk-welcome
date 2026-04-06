@@ -1,0 +1,7 @@
+FROM nginx:alpine
+
+# Copy everything (index.html, logo, assets folder, etc.) to Nginx's web folder
+COPY . /usr/share/nginx/html
+
+# Optional: Make sure Nginx can read the files
+RUN chmod -R 755 /usr/share/nginx/html
